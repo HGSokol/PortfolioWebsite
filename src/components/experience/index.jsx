@@ -14,29 +14,46 @@ export const Experience = () => {
           <h3>Frontend Development</h3>
           <div className="experience__content">
             <acticle className='experience__details'>
-              <AiOutlineCheckCircle/>
-              <h4>HTML</h4>
-              <small className='text-light'>Experienced</small>
+              <AiOutlineCheckCircle className='experience__details-icon'/>
+              <div>
+                <h4>HTML</h4>
+                <small className='text-light'>Experienced</small>
+              </div>
             </acticle>
             <acticle className='experience__details'>
-              <AiOutlineCheckCircle/>
-              <h4>SCSS</h4>
-              <small className='text-light'>Intermediate</small>
+              <AiOutlineCheckCircle className='experience__details-icon'/>
+              <div>
+                <h4>SCSS</h4>
+                <small className='text-light'>Intermediate</small>
+              </div>
             </acticle>
             <acticle className='experience__details'>
-              <AiOutlineCheckCircle/>
-              <h4>JavaScript</h4>
-              <small className='text-light'>Experienced</small>
+              <AiOutlineCheckCircle className='experience__details-icon'/>
+              <div>
+                <h4>JavaScript</h4>
+                <small className='text-light'>Experienced</small>
+              </div>
             </acticle>
             <acticle className='experience__details'>
-              <AiOutlineCheckCircle/>
-              <h4>React</h4>
-              <small className='text-light'>Experienced</small>
+              <AiOutlineCheckCircle className='experience__details-icon'/>
+              <div>
+                <h4>TypeScript</h4>
+                <small className='text-light'>Experienced</small>
+              </div>
             </acticle>
             <acticle className='experience__details'>
-              <AiOutlineCheckCircle/>
-              <h4>Redux</h4>
-              <small className='text-light'>Experienced</small>
+              <AiOutlineCheckCircle className='experience__details-icon'/>
+              <div>
+                <h4>React</h4>
+                <small className='text-light'>Experienced</small>
+              </div>
+            </acticle>
+            <acticle className='experience__details'>
+              <AiOutlineCheckCircle className='experience__details-icon'/>
+              <div>
+                <h4>Redux</h4>
+                <small className='text-light'>Experienced</small>
+              </div>
             </acticle>
           </div>
         </div>
@@ -44,9 +61,11 @@ export const Experience = () => {
         <h3>Frontend Development</h3>
           <div className="experience__content">
             <acticle className='experience__details'>
-              <AiOutlineCheckCircle/>
-              <h4>NodeJS</h4>
-              <small className='text-light'>Intermediate</small>
+              <AiOutlineCheckCircle className='experience__details-icon'/>
+              <div>
+                <h4>NodeJS</h4>
+                <small className='text-light'>Intermediate</small>
+              </div>
             </acticle>
           </div>
         </div>
