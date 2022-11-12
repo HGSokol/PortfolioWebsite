@@ -6,7 +6,6 @@ import { About } from './components/about'
 import { Experience } from './components/experience'
 import { Portfolio } from './components/portfolio'
 import { Contact } from './components/contact'
-import { Footer } from './components/footer'
 
 function App() {
   const [active, setActive] = React.useState('#')
@@ -19,7 +18,6 @@ function App() {
       <Experience />
       <Portfolio />
       <Contact />
-      <Footer />
     </>
   );
 }

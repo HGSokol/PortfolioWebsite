@@ -1,15 +1,37 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
+import emailjs from 'emailjs-com';
 import { GoMailRead } from 'react-icons/go'
 import { BsTelegram, BsFillTelephoneOutboundFill } from 'react-icons/bs'
 
 import './contact.css'
 
+// key Emailjs
+const serviceId = 'service_x287lcn'
+const templateId = 'template_bfjsrba'
+const publicKey = 'NTVfaz0ddAPgQjeWk'
+
+// key Telegram
+
 export const Contact = () => {
+  const [count, setCount] = useState(0)
+  const form = useRef()
+
+  const sendForm = (e) => {
+    e.preventDefault()
+
+    setCount(prev => prev + 1)
+
+    emailjs.sendForm(serviceId, templateId, form.current, publicKey)
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  }
   return(
     <section id='contact'>
       <h5>Get In Touch</h5>
       <h2>Contact Me</h2>
-
       <div className="container contact__container">
         <div className="contact__options">
           <article className='contact__option'>
@@ -32,11 +54,15 @@ export const Contact = () => {
             </span>
           </article>
         </div>
-        <form action="">
+        <form ref={form} onSubmit={sendForm}>
           <input type='text' name='name' placeholder='You Full Name' required/>
           <input type='email' name='email' placeholder='You Email' required/>
           <textarea name='message' rows='7' placeholder='You Message' required/>
-          <button type='submit' className='btn btn-primary'>Send Message</button>
+          {
+            count >=1 ? null: (
+              <button type='submit' className='btn btn-primary'>Send Message</button>
+            )
+          }
         </form>
       </div>
     </section>
